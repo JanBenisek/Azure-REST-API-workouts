@@ -10,7 +10,6 @@ On top, we deploy it by using Azure pipelines.
 ### Usage
   - See the `examples.ipynb` file
 
-
 ### Useful resources:
   - https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask
   - https://www.codementor.io/@sagaragarwal94/building-a-basic-restful-api-in-python-58k02xsiq
