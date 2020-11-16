@@ -1,0 +1,6 @@
+#connection_secret.py
+.azure/
+
+.venv
+
+.vscode/
