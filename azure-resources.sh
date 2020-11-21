@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# run me as ./azure-resources.sh in a bash shell
 printf -v date '%(%Y-%m-%d %H:%M:%S)T\n' -1
 echo "Starts building resources ... $date"
 
