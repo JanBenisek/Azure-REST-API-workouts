@@ -37,8 +37,10 @@ class ConnectionManager(object):
 
     def __getConnection(self):
         if (self.__connection is None):
-            url = os.environ['URL']
-            key = os.environ['KEY']
+            #url = os.environ['URL']
+            #key = os.environ['KEY']
+            url = 'https://appworkout.documents.azure.com:443/'
+            key = 'OsyoqG5QfzhjtK9EINDgzDTFK9dYEnF9vD76UrnZcM1rFPkIQeFmgqhoXrdoStFJOxy5i9OJCuacI7U7F6SKOg=='
 
             self.__connection = CosmosClient(url, key)
 
@@ -76,16 +78,6 @@ class Connectable(Resource):
         return container
 
 # %%
-'''
-container = Connectable().getConnection()
-
-result = container.read_item('2', partition_key='2')
-
-fields = ['sessionID', 'sessionStart', 'category', 'workout']
-result = {key: result[key] for key in fields}
-
-print(result)
-'''
 
 # %%
 # ============================================
@@ -238,6 +230,4 @@ api.add_resource(AllSessions, '/v1/all')
 
 # Start App
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port=5000, debug=True)
-#if __name__ == "__main__":
-#    app.run()
+    app.run(host='127.0.0.1', port=5000)
