@@ -4,8 +4,8 @@ import json
 
 from datetime import datetime
 
-url = connection_secret.URL
-key = connection_secret.KEY
+url = os.environ['URL']
+key = os.environ['KEY']
 client = CosmosClient(url, key)
 
 database_name = "workoutdb"

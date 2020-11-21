@@ -29,6 +29,7 @@ az webapp create \
     --deployment-source-branch master
 
 # Get the CosmosDB KEY
+echo "Exporting connection key ...";
 export connectionKEY=$(az cosmosdb keys list \
 	--type connection-strings \
 	--name $accountName \
@@ -37,6 +38,7 @@ export connectionKEY=$(az cosmosdb keys list \
 	--output tsv)
 
 # Get the CosmosDB URL
+echo "Exporting connection url ...";
 export connectionURL=$(az cosmosdb show \
     --resource-group $resourceGroup \
     --name $accountName \
@@ -44,10 +46,11 @@ export connectionURL=$(az cosmosdb show \
     --output tsv)
 
 # Assign the connection string to an App Setting in the Web App
+echo "Configuring app settings ...";
 az webapp config appsettings set \
     --name $appName \
-    --resource-group myResourceGroup \
-    --settings "KEY=$connectionKEY" "URL=$connectionURL"
+    --resource-group $resourceGroup \
+    --settings "KEY=$connectionKEY" "URL=$connectionURL" "FLASK_ENV=$FLASK_ENV"
 
 
 printf -v date '%(%Y-%m-%d %H:%M:%S)T\n' -1
