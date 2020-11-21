@@ -9,21 +9,21 @@ trigger:
 variables:
   # Azure Resource Manager connection created during pipeline creation
   azureServiceConnectionId: '2b26edd1-7c5c-4a1c-b358-5c6fa1fd3b3f'
-  
+
   # Web app name
-  webAppName: 'app-workout-session'
+  webAppName: 'workout-webapp'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: ''
+  environmentName: 'development'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
-  
+
   # Python version: 3.7
-  pythonVersion: '3.7'
+  pythonVersion: '3.8'
 
 stages:
 - stage: Build
@@ -37,7 +37,7 @@ stages:
       inputs:
         versionSpec: '$(pythonVersion)'
       displayName: 'Use Python $(pythonVersion)'
-    
+
     - script: |
         python -m venv antenv
         source antenv/bin/activate
@@ -73,7 +73,7 @@ stages:
       runOnce:
         deploy:
           steps:
-          
+
           - task: UsePythonVersion@0
             inputs:
               versionSpec: '$(pythonVersion)'

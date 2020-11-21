@@ -1,6 +1,10 @@
-#connection_secret.py
 .azure/
-
 .venv
-
 .vscode/
+.test.py
+
+# Additional Files
+venv/
+env/
+env.*
+.env

@@ -1,7 +1,7 @@
 # %%
 from azure.cosmos import CosmosClient
 import json
-import connection_secret
+
 from datetime import datetime
 
 url = connection_secret.URL
