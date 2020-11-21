@@ -10,7 +10,8 @@ export appName="workout-webapp"
 export location="WestUS2"
 export gitSource="https://github.com/JanBenisek/Azure-REST-API-workouts.git"
 export FLASK_ENV="development"
-
+export FLASK_DEBUG=1
+export FLASK_APP="app"
 
 echo "Creating Application Service Plan...";
 az appservice plan create \
@@ -50,7 +51,7 @@ echo "Configuring app settings ...";
 az webapp config appsettings set \
     --name $appName \
     --resource-group $resourceGroup \
-    --settings "KEY=$connectionKEY" "URL=$connectionURL" "FLASK_ENV=$FLASK_ENV"
+    --settings "KEY=$connectionKEY" "URL=$connectionURL" "FLASK_ENV=$FLASK_ENV" "FLASK_DEBUG=$FLASK_DEBUG" "FLASK_APP=$FLASK_APP"
 
 
 printf -v date '%(%Y-%m-%d %H:%M:%S)T\n' -1

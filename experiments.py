@@ -1,7 +1,6 @@
 # %%
 from azure.cosmos import CosmosClient
 import json
-
 from datetime import datetime
 
 url = os.environ['URL']
