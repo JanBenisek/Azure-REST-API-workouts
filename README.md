@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/janbenisek/restapi-workout-session/_apis/build/status/JanBenisek.Azure-REST-API-workouts?branchName=master)](https://dev.azure.com/janbenisek/restapi-workout-session/_build/latest?definitionId=1&branchName=master)
+
 # Workout logger - Azure REST API
 
 Simple REST API which lets you log your workout sessions built on Azure Cosmos DB.
