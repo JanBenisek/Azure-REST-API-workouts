@@ -80,6 +80,8 @@ class Connectable(Resource):
 # ============================================
 # ---------------- GYM API -------------------
 # ============================================
+
+
 class Workout(Connectable):
     def __init__(self):
         self.fields = ['sessionID', 'sessionStart',
@@ -228,4 +230,3 @@ api.add_resource(AllSessions, '/v1/all')
 # Start App
 if __name__ == "__main__":
     app.run(host='127.0.0.1', port=5000)
-
