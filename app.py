@@ -222,9 +222,9 @@ class AllSessions(Connectable):
 # -------------- API ROUTES ------------------
 # ============================================
 api.add_resource(Workout,
-                 '/v1/WorkoutSession',
-                 '/v1/WorkoutSession/<sessionID>')
-api.add_resource(AllSessions, '/v1/all')
+                 '/v2/WorkoutSession',
+                 '/v2/WorkoutSession/<sessionID>')
+api.add_resource(AllSessions, '/v2/all')
 
 
 # Start App
