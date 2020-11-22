@@ -7,8 +7,12 @@ echo "Deploying web app ... $date"
 export resourceGroup="grp-restapi"
 export planName="plan-restapi-workout"
 export appName="workout-webapp"
-export location="WestUS2"
+export location="westeurope"
+export accountName="appworkout"
+# westeurope, WestUS2
 export gitSource="https://github.com/JanBenisek/Azure-REST-API-workouts.git"
+#export gitSource="https://github.com/JanBenisek/python-docs-hello-world.git"
+
 export FLASK_ENV="development"
 export FLASK_DEBUG=1
 export FLASK_APP="app"
@@ -17,7 +21,7 @@ echo "Creating Application Service Plan...";
 az appservice plan create \
     --name $planName \
     --resource-group $resourceGroup \
-    --sku F1 \
+    --sku B1 \
     --is-linux
 
 echo "Creating Web Application...";
@@ -32,10 +36,9 @@ az webapp create \
 # Get the CosmosDB KEY
 echo "Exporting connection key ...";
 export connectionKEY=$(az cosmosdb keys list \
-	--type connection-strings \
 	--name $accountName \
 	--resource-group $resourceGroup \
-	--query connectionStrings[0].connectionString \
+	--query "primaryMasterKey" \
 	--output tsv)
 
 # Get the CosmosDB URL

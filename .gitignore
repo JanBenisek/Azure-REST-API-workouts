@@ -1,7 +1,9 @@
 .azure/
 .venv
 .vscode/
-test.py
+experiments.py
+testapp.py
+resources/app_test.py
 
 # Additional Files
 venv/
