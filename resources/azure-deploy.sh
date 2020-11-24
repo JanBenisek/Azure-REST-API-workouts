@@ -9,9 +9,7 @@ export planName="plan-restapi-workout"
 export appName="workout-webapp"
 export location="westeurope"
 export accountName="appworkout"
-# westeurope, WestUS2
 export gitSource="https://github.com/JanBenisek/Azure-REST-API-workouts.git"
-#export gitSource="https://github.com/JanBenisek/python-docs-hello-world.git"
 
 export FLASK_ENV="development"
 export FLASK_DEBUG=1
