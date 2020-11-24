@@ -1,5 +1,3 @@
-[![Build Status](https://dev.azure.com/janbenisek/restapi-workout-session/_apis/build/status/JanBenisek.Azure-REST-API-workouts?branchName=master)](https://dev.azure.com/janbenisek/restapi-workout-session/_build/latest?definitionId=1&branchName=master)
-
 # Workout logger - Azure REST API
 
 Simple REST API which lets you log your workout sessions built on Azure Cosmos DB.
@@ -27,3 +25,4 @@ On top, we deploy it by using Azure pipelines.
   - https://docs.microsoft.com/en-us/samples/azure-samples/azure-sql-db-python-rest-api/azure-sql-db-python-rest-api/
   - https://github.com/Azure-Samples/azure-sql-db-python-rest-api
   - https://github.com/Azure/azure-sdk-for-python/blob/master/sdk/cosmos/azure-cosmos/samples/examples.py
+  - https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops
