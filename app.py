@@ -1,7 +1,7 @@
 # %%
 from flask import Flask
-from flask_restful import reqparse, abort, Api
-# from Flask_RESTful import reqparse, abort, Api
+from flask_restful import reqparse, abort, Api, Resource
+# from Flask_RESTful import reqparse, abort, Api, Resource
 from threading import Lock
 from tenacity import *
 import logging
@@ -223,9 +223,9 @@ class AllSessions(Connectable):
 # -------------- API ROUTES ------------------
 # ============================================
 api.add_resource(Workout,
-                 '/v2/WorkoutSession',
-                 '/v2/WorkoutSession/<sessionID>')
-api.add_resource(AllSessions, '/v2/all')
+                 '/v1/WorkoutSession',
+                 '/v1/WorkoutSession/<sessionID>')
+api.add_resource(AllSessions, '/v1/all')
 
 
 # Start App

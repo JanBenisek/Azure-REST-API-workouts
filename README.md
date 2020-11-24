@@ -12,7 +12,8 @@ On top, we deploy it by using Azure pipelines.
 
 ## Deploy the API
   - Build the webapp by running `resources/azure-deploy.sh` file
-  - Upon commit, the Azure Pipelines will be triggered, deploying the newest version
+  - As an experiment, I set up Azure Pipelines
+  - -  It will be triggered upon commit, deploying the newest version
 
 ### Usage
   - See the `resources/examples.ipynb` file
