@@ -21,7 +21,7 @@ echo "Creating Application Service Plan...";
 az appservice plan create \
     --name $planName \
     --resource-group $resourceGroup \
-    --sku B1 \
+    --sku F1 \
     --is-linux
 
 echo "Creating Web Application...";
