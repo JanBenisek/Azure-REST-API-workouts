@@ -3,7 +3,7 @@
 Simple REST API which lets you log your workout sessions built on Azure Cosmos DB.
 On top, we deploy it by using Azure pipelines.
 
-### How get build infrastructure:
+### How to build infrastructure:
   - Just run the `resources/azure-resources.sh` file
   - It also produces `key` and `url` used for connection
   - For now, the data are manually updated to the container
